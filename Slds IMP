@@ -1,0 +1,63 @@
+														slds classes
+												  Block-Element-Modifier(BEM)
+														============
+				
+<apex:page?  // outer wrapper				
+													
+<apex:slds/>
+
+for icons: <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+slds-page-header  // lightning header
+
+slds-badge
+
+slds-box
+
+slds-scope
+
+slds-theme_success
+
+slds-theme_alert-text
+
+slds-text-heading--label  // SF heading and CAPS all
+
+slds-page-header__title  // Bold header
+
+slds-text-title_caps  // upper case
+
+slds-grid
+	slds-col	// size automatically
+		slds-size_X-of-Y	//Manual size min is 1-of-11
+		
+		_____________________________________________________________________________________________________________________
+												@@@@ DYNAMIC GRID @@@@
+		slds-wrap  // used with main div for dynamic verticle grid
+		---------------------------------------------------------------------------------------------------------------------
+		
+		slds-small-size_1-of-2 		//SPECIFY FOR small screan devises px>480
+		slds-medium-size_3-of-4		//Specify for medium size devices px>768
+		
+				example:
+				--------
+			<div class="slds-grid slds-wrap">
+				<div class="slds-theme_success slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_3-of-4">A</div>
+	            <div class="slds-theme_error slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-4">B</div>
+			</div>
+				Explanation :
+				-----------
+				this will take 1-of-1 for all devises
+				  but (we specify)
+						slds-small_1-of-2  i.e for width >480px it will start taking 1-of-2 only
+				  similarly
+						slds-medium-size_3-of-4  mean it will start taking 3-of-4 size for device width greater then >768px
+				
+		_____________________________________________________________________________________________________________________
+		
+slds-truncate // HELP TEXT ON title
+
+ <h1 class="{!v.defVal ? 'slds-theme_success slds-p-around_small slds-m-around_small' : 'slds-theme_error slds-p-around_small slds-m-around_small'}">MESSAGE</h1>
+		
+		
